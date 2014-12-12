@@ -8,7 +8,9 @@ namespace Product
         {
             ProductStuffV1 first = (ProductStuffV1)x;
             ProductStuffV1 second = (ProductStuffV1)y;
-            return first.Name.CompareTo(second.Name);
+
+            //return first.Name.CompareTo(second.Name);
+            return string.CompareOrdinal(first.Name, second.Name);
         }
     }
 }

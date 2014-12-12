@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Product
 {
-    internal class Program
+    internal static class Program
     {
         internal static void Main(string[] args)
         {
@@ -36,7 +36,8 @@ namespace Product
             productsV22.Sort(
                 delegate(ProductStuffV2 x, ProductStuffV2 y)
                 {
-                    return x.Name.CompareTo(y.Name);
+                    //return x.Name.CompareTo(y.Name);
+                    return string.CompareOrdinal(x.Name, y.Name);
                 });
             
             foreach (ProductStuffV2 product in productsV22)

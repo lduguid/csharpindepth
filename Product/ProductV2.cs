@@ -24,10 +24,10 @@ namespace Product
             private set { this.name = value; }
         }
         
-        internal decimal Price
+        private decimal Price
         {
             get { return this.price; }
-            private set { this.price = value; }
+            set { this.price = value; }
         }
         
         public static List<ProductStuffV2> GetSampleProducts()
