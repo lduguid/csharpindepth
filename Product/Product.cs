@@ -4,9 +4,13 @@ using System.Collections;
 
 namespace Product
 {
-
     internal class ProductStuff
     {
+        /// <summary>
+        /// 
+        /// C# 1 version from c# indepth
+        /// 
+        /// </summary>
         private string name;
         private decimal price;
 
@@ -47,6 +51,5 @@ namespace Product
             return string.Format("{0}: {1}", 
                 arg0: this.name, arg1: this.price);
         }
-
     }
 }
