@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace Product
 {
-    internal class ProductStuff
+    internal class ProductStuffV1
     {
         /// <summary>
         /// 
@@ -14,7 +14,7 @@ namespace Product
         private string name;
         private decimal price;
 
-        public ProductStuff(string name, decimal price)
+        public ProductStuffV1(string name, decimal price)
         {
             this.name = name;
             this.price = price;
@@ -39,10 +39,10 @@ namespace Product
         public static ArrayList GetSampleProducts()
         {
             ArrayList list = new ArrayList();
-            list.Add(new ProductStuff("West Side Story", 9.99m));
-            list.Add(new ProductStuff("Assassins", 4.99m));
-            list.Add(new ProductStuff("Frogs", 13.99m));
-            list.Add(new ProductStuff("Sweeny Todd", 10.99m));
+            list.Add(new ProductStuffV1("West Side Story", 9.99m));
+            list.Add(new ProductStuffV1("Assassins", 4.99m));
+            list.Add(new ProductStuffV1("Frogs", 13.99m));
+            list.Add(new ProductStuffV1("Sweeny Todd", 10.99m));
             return list;
         }
 
