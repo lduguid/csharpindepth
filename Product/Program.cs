@@ -20,6 +20,14 @@ namespace Product
                 System.Console.WriteLine(item);
             }
 
+            System.Console.WriteLine();
+
+            // c# version 3
+            foreach (ProductStuffV3 item in ProductStuffV3.GetSampleProducts())
+            {
+                System.Console.WriteLine(item);
+            }
+
         }
     }
 }

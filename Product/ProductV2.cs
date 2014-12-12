@@ -4,6 +4,11 @@ namespace Product
 {
     public class ProductStuffV2
     {
+        /// <summary>
+        /// 
+        /// C# 2 version from c# indepth
+        /// 
+        /// </summary>
         private string name;
         private decimal price;
 
