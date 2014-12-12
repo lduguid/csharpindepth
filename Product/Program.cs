@@ -6,7 +6,7 @@ namespace Product
     {
         internal static void Main(string[] args)
         {
-            foreach (ProductStuff item in ProductStuff.GetSampleProducts())
+            foreach (ProductStuffV1 item in ProductStuffV1.GetSampleProducts())
             {
                 System.Console.WriteLine(item);
             }
