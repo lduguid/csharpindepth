@@ -17,21 +17,35 @@ namespace Product
             }
 
             Console.WriteLine();
+            Console.WriteLine("------------------------------");
+            Console.WriteLine();
 
-            // c# version 2
-            List<ProductStuffV2> productsV2 = ProductStuffV2.GetSampleProducts();
+            // c# version 2.1
+            List<ProductStuffV2> productsV21 = ProductStuffV2.GetSampleProducts();
+            productsV21.Sort(new ProductNameComparerV2());
+            foreach (ProductStuffV2 product in productsV21)
+            {
+                Console.WriteLine(product);
+            }
 
-            productsV2.Sort(
+            Console.WriteLine();
+
+            // c# version 2.2
+            List<ProductStuffV2> productsV22 = ProductStuffV2.GetSampleProducts();
+
+            productsV22.Sort(
                 delegate(ProductStuffV2 x, ProductStuffV2 y)
                 {
                     return x.Name.CompareTo(y.Name);
                 });
             
-            foreach (ProductStuffV2 product in productsV2)
+            foreach (ProductStuffV2 product in productsV22)
             {
                 Console.WriteLine(product);
             }
 
+            Console.WriteLine();
+            Console.WriteLine("------------------------------");
             Console.WriteLine();
 
             // c# version 3
@@ -40,6 +54,8 @@ namespace Product
                 Console.WriteLine(item);
             }
 
+            Console.WriteLine();
+            Console.WriteLine("------------------------------");
             Console.WriteLine();
 
             // c# version 4
