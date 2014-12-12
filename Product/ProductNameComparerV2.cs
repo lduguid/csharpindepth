@@ -1,16 +1,13 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 
 namespace Product
 {
-    internal class ProductNameComparerV1 : IComparer
+    internal class ProductNameComparerV2 : IComparer<ProductStuffV2>
     {
-        public int Compare(object x, object y)
+        public int Compare(ProductStuffV2 x, ProductStuffV2 y)
         {
-            ProductStuffV1 first = (ProductStuffV1)x;
-            ProductStuffV1 second = (ProductStuffV1)y;
-
-            //return first.Name.CompareTo(second.Name);
-            return string.CompareOrdinal(first.Name, second.Name);
+            // return first.Name.CompareTo(second.Name);
+            return string.CompareOrdinal(x.Name, y.Name);
         }
     }
 }

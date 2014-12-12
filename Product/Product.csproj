@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductNameComparerV2.cs" />
     <Compile Include="ProductNameComparerV1.cs" />
+    <Compile Include="ProductNameComparerV2.cs" />
     <Compile Include="ProductV4.cs" />
     <Compile Include="ProductV3.cs" />
     <Compile Include="ProductV2.cs" />
