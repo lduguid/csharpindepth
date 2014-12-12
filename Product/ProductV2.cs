@@ -2,7 +2,7 @@
 
 namespace Product
 {
-    public class ProductStuffV2
+    internal class ProductStuffV2
     {
         /// <summary>
         /// 
@@ -18,13 +18,13 @@ namespace Product
             this.Price = price;
         }
 
-        public string Name
+        internal string Name
         {
             get { return this.name; }
             private set { this.name = value; }
         }
         
-        public decimal Price
+        internal decimal Price
         {
             get { return this.price; }
             private set { this.price = value; }
