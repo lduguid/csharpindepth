@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Product
 {
@@ -7,27 +9,44 @@ namespace Product
         internal static void Main(string[] args)
         {
             // c# version 1
-            foreach (ProductStuffV1 item in ProductStuffV1.GetSampleProducts())
+            ArrayList productsV1 = ProductStuffV1.GetSampleProducts();
+            productsV1.Sort(new ProductNameComparerV1());
+            foreach (ProductStuffV1 product in productsV1)
             {
-                System.Console.WriteLine(item);
+                Console.WriteLine(product);
             }
 
-            System.Console.WriteLine();
+            Console.WriteLine();
 
             // c# version 2
-            foreach (ProductStuffV2 item in ProductStuffV2.GetSampleProducts())
+            List<ProductStuffV2> productsV2 = ProductStuffV2.GetSampleProducts();
+
+            productsV2.Sort(
+                delegate(ProductStuffV2 x, ProductStuffV2 y)
+                {
+                    return x.Name.CompareTo(y.Name);
+                });
+            
+            foreach (ProductStuffV2 product in productsV2)
             {
-                System.Console.WriteLine(item);
+                Console.WriteLine(product);
             }
 
-            System.Console.WriteLine();
+            Console.WriteLine();
 
             // c# version 3
             foreach (ProductStuffV3 item in ProductStuffV3.GetSampleProducts())
             {
-                System.Console.WriteLine(item);
+                Console.WriteLine(item);
             }
 
+            Console.WriteLine();
+
+            // c# version 4
+            foreach (ProductStuffV4 item in ProductStuffV4.GetSampleProducts())
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

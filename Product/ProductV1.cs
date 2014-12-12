@@ -18,7 +18,7 @@ namespace Product
             this.price = price;
         }
 
-        private string Name
+        internal string Name
         {
             get
             {

@@ -19,7 +19,7 @@ namespace Product
             this.price = price;
         }
 
-        public string Name
+        internal string Name
         {
             get
             {
@@ -27,7 +27,7 @@ namespace Product
             }
         }
 
-        public decimal Price
+        internal decimal Price
         {
             get
             {
