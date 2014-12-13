@@ -1,3 +1,3 @@
 csharpindepth
 =============
-work my way throuhg snippets in http://csharpindepth.com/
+work my way through snippets in http://csharpindepth.com/
