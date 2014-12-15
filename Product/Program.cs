@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Product
 {
@@ -41,6 +42,27 @@ namespace Product
                 });
             
             foreach (ProductStuffV2 product in productsV22)
+            {
+                Console.WriteLine(product);
+            }
+
+            Console.WriteLine();
+
+            // c# version 2.3
+            List<ProductStuffV2> productsv23 = ProductStuffV2.GetSampleProducts();
+            
+            //productsv2.Sort((x, y) => x.Name.CompareTo(y.Name));
+            productsv23.Sort((x, y) => string.CompareOrdinal(x.Name, y.Name));
+            foreach (ProductStuffV2 product in productsv23)
+            {
+                Console.WriteLine(product);
+            }
+
+            Console.WriteLine();
+
+            // c# version 2.4
+            List<ProductStuffV2> productsV24 = ProductStuffV2.GetSampleProducts();
+            foreach (ProductStuffV2 product in productsV24.OrderBy(p => p.Name))
             {
                 Console.WriteLine(product);
             }
