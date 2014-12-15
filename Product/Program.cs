@@ -77,7 +77,7 @@ namespace Product
             {
                 Console.WriteLine(product);
             }
-
+            
             Console.WriteLine();
 
             // c# version 2.4
@@ -95,6 +95,15 @@ namespace Product
             foreach (ProductStuffV3 item in ProductStuffV3.GetSampleProducts())
             {
                 Console.WriteLine(item);
+            }
+
+            Console.WriteLine("-----Price > 10-----");
+
+            // query
+            List<ProductStuffV3> productsV3 = ProductStuffV3.GetSampleProducts();
+            foreach (ProductStuffV3 productsv3Q in productsV3.Where(p => p.Price > 10))
+            {
+                Console.WriteLine(productsv3Q);
             }
 
             Console.WriteLine();

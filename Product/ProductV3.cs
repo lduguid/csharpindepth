@@ -21,7 +21,7 @@ namespace Product
 
         private string Name { get; set; }
 
-        private decimal Price { get; set; }
+        internal decimal Price { get; set; }
         
         public static List<ProductStuffV3> GetSampleProducts()
         {
