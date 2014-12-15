@@ -24,7 +24,7 @@ namespace Product
             private set { this.name = value; }
         }
         
-        private decimal Price
+        internal decimal Price
         {
             get { return this.price; }
             set { this.price = value; }

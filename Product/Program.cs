@@ -22,12 +22,24 @@ namespace Product
             Console.WriteLine();
 
             // c# version 2.1
+            // sorting
             List<ProductStuffV2> productsV21 = ProductStuffV2.GetSampleProducts();
             productsV21.Sort(new ProductNameComparerV2());
             foreach (ProductStuffV2 product in productsV21)
             {
                 Console.WriteLine(product);
             }
+
+            Console.WriteLine("-----Price > 10-----");
+
+            // querying
+            Predicate<ProductStuffV2> test = delegate(ProductStuffV2 pV21)
+            {
+                return pV21.Price > 10m;
+            };
+            List<ProductStuffV2> matches = productsV21.FindAll(test);
+            Action<ProductStuffV2> print = Console.WriteLine;
+            matches.ForEach(print);
 
             Console.WriteLine();
 
@@ -45,6 +57,14 @@ namespace Product
             {
                 Console.WriteLine(product);
             }
+
+            Console.WriteLine("-----Price > 10-----");
+            
+            // quering
+            productsV22.FindAll(delegate(ProductStuffV2 p)
+            {
+                return p.Price > 10;
+            }).ForEach(Console.WriteLine);
 
             Console.WriteLine();
 
