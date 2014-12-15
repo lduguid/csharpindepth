@@ -50,3 +50,20 @@ C# 3
 * options of leaving list unsorted
 
 
+Anonymous methods and lambda expressions in C# 2 and 3 aid seperation of concerns and readability.
+--------------------------------------------------------------------------------------------------
+
+C# 1
+----
+* Strong coupling between condition and action.
+* Both are hardcoded.
+
+C# 2
+----
+* seperate condition from action invoked.
+* Anonymous methods make delegates simple.
+
+C# 3
+----
+* lambda expressions make the condition even easier to read.
+
